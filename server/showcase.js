@@ -5,6 +5,7 @@ const { ShowCase, postForm } = require('../db/index.js');
 const showcase = express.Router();
 
 showcase.get('/api/showcase', (req, res) => {
+  console.log('get');
   ShowCase.find().sort({ ratio: 1 })
     .then((data) => res.status(200).send(data))
     .catch((err) => {
