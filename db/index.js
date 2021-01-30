@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-module.exports.connect = mongoose.connect('mongodb://localhost/tripAdvisor', {
+module.exports.connect = mongoose.connect('mongodb://database:27017/chris', {
   useNewUrlParser: true, useUnifiedTopology: true,
 })
   .then(() => console.log('Success connecting to mongo Trip Advisor'))
